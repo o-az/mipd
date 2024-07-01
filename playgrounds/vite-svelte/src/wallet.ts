@@ -1,4 +1,4 @@
-import { EIP1193Provider, announceProvider } from 'mipd'
+import { type EIP1193Provider, announceProvider } from 'mipd'
 import 'mipd/window'
 
 announceProvider({

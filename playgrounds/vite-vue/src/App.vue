@@ -1,10 +1,10 @@
 <script setup lang="ts">
-  import { reactive } from 'vue'
-  import { createStore } from 'mipd'
+import { createStore } from 'mipd'
+import { reactive } from 'vue'
 
-  const store = createStore()
-  const state = reactive({ providers: store.getProviders() })
-  store.subscribe(providers => (state.providers = providers))
+const store = createStore()
+const state = reactive({ providers: store.getProviders() })
+store.subscribe((providers) => (state.providers = providers))
 </script>
 
 <template>
