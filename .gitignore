@@ -21,3 +21,4 @@ dist
 # @wagmi/cli
 generated.ts
 _
+*.vitest-temp.*

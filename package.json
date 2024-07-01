@@ -25,7 +25,7 @@
     "size": "size-limit",
     "test": "vitest dev",
     "test:cov": "vitest run --coverage",
-    "test:typecheck": "vitest typecheck",
+    "test:typecheck": "vitest --typecheck.only",
     "typecheck": "tsc --noEmit"
   },
   "files": [

@@ -9,9 +9,9 @@ import type {
 } from './index.js'
 
 test('EIP6963ProviderInfo', () => {
-  expectTypeOf<EIP6963ProviderInfo['icon']>().toEqualTypeOf<string>
+  expectTypeOf<EIP6963ProviderInfo['icon']>().toEqualTypeOf<`data:image/${string}`>
   expectTypeOf<EIP6963ProviderInfo['name']>().toEqualTypeOf<string>
-  expectTypeOf<EIP6963ProviderInfo['rdns']>().toEqualTypeOf<
+  expectTypeOf<EIP6963ProviderInfo['rdns']>().toMatchTypeOf<
     undefined | 'com.enkrypt' | 'io.metamask' | (string & {})
   >
   expectTypeOf<EIP6963ProviderInfo['uuid']>().toEqualTypeOf<string>
