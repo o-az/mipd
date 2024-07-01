@@ -3,8 +3,6 @@ import type {
   EIP6963RequestProviderEvent,
 } from './types.js'
 
-export {}
-
 declare global {
   interface WindowEventMap {
     'eip6963:announceProvider': EIP6963AnnounceProviderEvent

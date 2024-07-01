@@ -1,0 +1,99 @@
+{
+  "$schema": "https://esm.sh/@biomejs/biome@1.8.3/configuration_schema.json",
+  "files": {
+    "include": [
+      "*.ts",
+      "*.mts",
+      "*.js",
+      "*.cjs",
+      "*.jsx",
+      "*.tsx",
+      "*.vue",
+      "*.d.ts",
+      "*.json",
+      "*.jsonc",
+      "*.astro",
+      "*.svelte"
+    ],
+    "ignore": [
+      "coverage",
+      "dist",
+      "tsconfig.json",
+      "tsconfig.*.json",
+      "tsconfig.node.json"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": "error"
+      },
+      "performance": {
+        "noDelete": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off",
+        "useShorthandArrayType": "error"
+      },
+      "complexity": {
+        "noForEach": "off"
+      },
+      "suspicious": {
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off",
+        "noAssignInExpressions": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded"
+    }
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "overrides": [
+    {
+      "include": ["./src/types.test-d.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedVariables": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["*.svelte"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noUnusedLabels": "off",
+            "noUnusedImports": "off",
+            "noUnusedVariables": "off",
+            "useHookAtTopLevel": "off"
+          },
+          "style": {
+            "useConst": "off"
+          },
+          "suspicious": {
+            "noConfusingLabels": "off",
+            "noAssignInExpressions": "off"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,5 +1,5 @@
+import path from 'node:path'
 import { readJsonSync, writeJsonSync } from 'fs-extra'
-import path from 'path'
 
 // Generates a package.json to be published to NPM with only the necessary fields.
 const packageJsonPath = path.join(__dirname, '../package.json')
@@ -8,8 +8,8 @@ const tmpPackageJson = readJsonSync(packageJsonPath)
 writeJsonSync(`${packageJsonPath}.tmp`, tmpPackageJson, { spaces: 2 })
 
 const {
-  ['simple-git-hooks']: _sgh,
-  ['size-limit']: _sL,
+  'simple-git-hooks': _sgh,
+  'size-limit': _sL,
   devDependencies: _dD,
   packageManager: _pM,
   scripts: _s,

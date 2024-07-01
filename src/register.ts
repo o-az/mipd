@@ -10,7 +10,7 @@
  *   }
  * }
  */
-// rome-ignore lint/suspicious/noEmptyInterface: For extending global type
+// biome-ignore lint/suspicious/noEmptyInterface: For extending global type
 export interface Register {}
 
 export type DefaultRegister = {
